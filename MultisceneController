@@ -1,0 +1,24 @@
+package sample;
+
+import javafx.event.ActionEvent;
+
+public class MultisceneController {
+
+    public void tilføjPatient(ActionEvent actionEvent) { Main.setGridPane(0);
+    }
+
+    public void patientKonsultation(ActionEvent actionEvent) { Main.setGridPane(1);
+    }
+
+    public void luk(ActionEvent actionEvent) { Main.setGridPane(2);
+    }
+
+    public void antalSmittede(ActionEvent actionEvent) { Main.setGridPane(0);
+    }
+
+    public void infektionsRate(ActionEvent actionEvent) { Main.setGridPane(1);
+    }
+
+    public void mutationer(ActionEvent actionEvent) { Main.setGridPane(3);
+    }
+}
