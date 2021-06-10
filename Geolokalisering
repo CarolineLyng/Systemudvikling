@@ -1,0 +1,38 @@
+package sample;
+
+import java.time.LocalDate;
+
+public class Geolokalisering {
+    private Integer zipCode;
+    private LocalDate tidspunkt;
+
+    public Geolokalisering(Integer zipCode, LocalDate tidspunkt) {
+        this.zipCode = zipCode;
+        this.tidspunkt = tidspunkt;
+    }
+
+    public Integer getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(Integer zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public LocalDate getTidspunkt() {
+        return tidspunkt;
+    }
+
+    public void setTidspunkt(LocalDate tidspunkt) {
+        this.tidspunkt = tidspunkt;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Geolokalisering{" +
+                "zipCode='" + zipCode + '\'' +
+                "tidspunkt='" + tidspunkt + '\'' +
+                '}';
+    }
+}
