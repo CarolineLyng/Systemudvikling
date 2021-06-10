@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1200.0" vgap="10.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.KonsulterPatientController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.33335876464844" minWidth="0.0" prefWidth="0.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="558.3333333333334" minWidth="10.0" prefWidth="71.33330027262366" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="775.333366394043" minWidth="10.0" prefWidth="318.0000305175782" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="727.9999287923177" minWidth="10.0" prefWidth="575.3333028157552" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.00000000000006" minWidth="10.0" prefWidth="122.00000000000006" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="69.33331298828125" minWidth="10.0" prefWidth="26.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="111.3333231608073" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="111.3333231608073" minHeight="5.999994913736984" prefHeight="37.66668065388997" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="375.99998982747394" minHeight="10.0" prefHeight="375.99998982747394" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="27.333343505859375" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="31.33331298828125" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TextField fx:id="cpr2Text" prefHeight="25.0" prefWidth="569.0" promptText="######-####" text="######-####" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <TabPane fx:id="KonsulterTabpane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2">
+            <tabs>
+                <Tab fx:id="TestTab" text="Test">
+                    <content>
+                        <TableView fx:id="TestTable" prefHeight="200.0" prefWidth="200.0">
+                            <columns>
+                                <TableColumn fx:id="testDateKolonne" prefWidth="84.00000286102295" text="Dato" />
+                                <TableColumn fx:id="resultKolonne" prefWidth="96.0000228881836" text="Resultat" />
+                                <TableColumn fx:id="mutationKolonne" prefWidth="87.99998474121094" text="Mutation" />
+                                <TableColumn fx:id="testTypeKolonne" prefWidth="86.6666259765625" text="Test type" />
+                                <TableColumn fx:id="placeKolonne" prefWidth="205.33334350585938" text="Test sted" />
+                            </columns>
+                        </TableView>
+                    </content>
+                </Tab>
+                <Tab fx:id="SensorTab" text="Sensordata">
+                    <content>
+                        <TableView fx:id="SensorTable" prefHeight="200.0" prefWidth="200.0">
+                            <columns>
+                                <TableColumn fx:id="SensorDatoKolonne" prefWidth="75.0" text="Dato" />
+                                <TableColumn fx:id="HjerteRytmeKolonne" prefWidth="75.0" text="Hjerterytme" />
+                                <TableColumn fx:id="TemperaturKolonne" prefWidth="108.66667175292969" text="Temperatur" />
+                            </columns>
+                        </TableView>
+                    </content>
+                </Tab>
+                <Tab fx:id="GeolokaliseringTab" text="Geolokalisering" />
+                    <content>
+                        <TableView fx:id="GeolokaliseringTable" prefHeight="200.0" prefWidth="200.0">
+                            <columns>
+                                <TableColumn fx:id="zipCodeKolonne" prefWidth="75.0" text="Postnummer" />
+                                <TableColumn fx:id="tidspunktKolonne" prefWidth="75.0" text="Tidspunkt" />
+                            </columns>
+                        </TableView>
+                    </content>
+                </Tab>
+                <Tab fx:id="KontaktTab" text="Kontakt">
+                    <content>
+                        <TextArea fx:id="KontaktText" prefHeight="200.0" prefWidth="200.0" promptText="Skriv besked til patient." />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="SendBesked" mnemonicParsing="false" onAction="#SendButton" prefHeight="25.0" prefWidth="115.0" text="Send besked" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+        <Label fx:id="labelcpr2" text="CPR-nummer" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button fx:id="Søg" mnemonicParsing="false" onAction="#SøgButton" text="Søg" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+    </children>
+</GridPane>
