@@ -1,0 +1,23 @@
+package sample;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class DataValidator {
+
+    // Class used to check if input data is valid
+
+    public static boolean isValidDate(String dateString) {
+        Boolean result = false;
+
+        try {
+            DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate b = LocalDate.parse(dateString, dateFormatter);
+            return true;
+        }
+        catch (DateTimeParseException dtpe) {
+            System.err.println("Illegal date:"+dateString);
+            return false;
