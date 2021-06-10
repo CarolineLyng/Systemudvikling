@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<GridPane fx:id="grid" hgap="10.0" prefHeight="500.0" prefWidth="1200.0" vgap="10.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TilføjPatientController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="8.333312034606934" prefWidth="14.666664759318031" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.00000190734863" minWidth="10.0" prefWidth="106.00001017252603" />
+        <ColumnConstraints maxWidth="288.99999745686847" minWidth="141.33332316080728" prefWidth="228.00000000000003" />
+        <ColumnConstraints maxWidth="92.66666666666669" minWidth="51.6666259765625" prefWidth="67.99995930989581" />
+        <ColumnConstraints maxWidth="232.66666666666663" minWidth="150.33332316080725" prefWidth="175.3333740234375" />
+        <ColumnConstraints maxWidth="352.0" minWidth="150.33332316080725" prefWidth="325.33341471354174" />
+        <ColumnConstraints maxWidth="232.66666666666663" minWidth="0.0" prefWidth="27.333251953125" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="26.0" minHeight="5.333329200744629" prefHeight="18.666661580403645" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="72.66666666666666" minHeight="0.0" prefHeight="26.666666666666668" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="79.66666285196939" minHeight="10.0" prefHeight="27.333330790201813" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="99.33333587646484" minHeight="21.999989827473954" prefHeight="29.333328247070327" />
+        <RowConstraints maxHeight="122.66667175292969" minHeight="25.33331298828125" prefHeight="40.6666310628255" />
+        <RowConstraints maxHeight="234.66669209798175" minHeight="137.3333231608073" prefHeight="231.9999796549479" />
+        <RowConstraints maxHeight="42.999979654947936" minHeight="30.666707356770814" prefHeight="34.000020345052064" />
+        <RowConstraints maxHeight="19.6666259765625" minHeight="2.3333536783854356" prefHeight="2.3333536783854356" />
+    </rowConstraints>
+    <TextArea id="patientListTextArea" fx:id="patientListTextArea" prefHeight="227.0" prefWidth="843.0" text="Liste med registrerede" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="5">
+        <font>
+            <Font name="Courier New" size="11.0" />
+        </font>
+    </TextArea>
+    <TextField id="cprText" fx:id="cprText" promptText="######-####" text="######-####" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <TextField id="phoneText" fx:id="phoneText" promptText="+45 ########" text="+45 ########" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <TextField id="lastNameText" fx:id="lastNameText" promptText="Efternavn" text="Efternavn" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+    <TextField id="firstNameText" fx:id="firstNameText" promptText="Fornavn" text="Fornavn" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <Label id="Labelcpr" fx:id="labelCpr" text="CPR-nummer" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label id="labelFirstName" fx:id="labelFirstName" text="Fornavn" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label id="labelLastName" fx:id="labelLastName" text="Efternavn" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+    <Label id="labelPhone" fx:id="labelPhone" text="Telefonnummer" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Button id="buttonAdd" fx:id="buttonAdd" mnemonicParsing="false" onAction="#onAddPatient" text="Tilføj patient" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Button id="buttonClearAll" fx:id="buttonClearAll" mnemonicParsing="false" onAction="#onClearAll" text="Fjern alle" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+</GridPane>
