@@ -1,0 +1,81 @@
+
+package sample;
+
+import java.time.LocalDate;
+
+public class Test {
+    private String testID;
+    private LocalDate testDate;
+    private String result;
+    private Mutation mutation;
+    private String testType;
+    private String place;
+
+    public Test(String testID, LocalDate testDate, String result, Mutation mutation, String testType, String place) {
+        this.testID = testID;
+        this.testDate = testDate;
+        this.result = result;
+        this.mutation = mutation;
+        this.testType = testType;
+        this.place = place;
+    }
+
+    public String getTestID() {
+        return testID;
+    }
+
+    public void setTestID(String testID) {
+        this.testID = testID;
+    }
+
+    public LocalDate getTestDate() {
+        return testDate;
+    }
+
+    public void setTestDate(LocalDate testDate) {
+        this.testDate = testDate;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public Mutation getmutation() {
+        return mutation;
+    }
+
+    public void setmutation(Mutation mutation) {
+        this.mutation = mutation;
+    }
+
+    public String getTestType() {
+        return testType;
+    }
+
+    public void setTestType(String testType) {
+        this.testType = testType;
+    }
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    @Override
+    public String toString() {
+        return "Test{" +
+                "testID='" + testID + '\'' +
+                ", testDate=" + testDate +
+                ", result='" + result + '\'' +
+                ", mutation='" + mutation.getNavn() + '\'' +
+                ", testType='" + testType + '\'' +
+                ", place='" + place + '\'' +
+                '}';
+    }
+}
