@@ -1,0 +1,53 @@
+package sample;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
+import javafx.scene.text.Font;
+
+public class LoginController {
+    public Label VelkommenLabel;
+    public Label BrugernavnLabel;
+    public TextField BrugernavnText;
+    public TabPane BrugernavnTabpane;
+    public Label AdgangskodeLabel;
+    public TextField AdgangskodeText;
+    public TabPane AdgangskodeTabpane;
+    public Button LoginButton;
+
+    @FXML
+    private GridPane grid;
+
+    private void clearTextFields(GridPane grid) {
+        for (Node node : grid.getChildren()) {
+            if (node instanceof TextField) {
+                // clear
+                ((TextField) node).setText("");
+                node.setStyle(null);
+            }
+        }
+    }
+    private void resetTextFields(GridPane grid) {
+        // Simple method to reset the style on text fields in a grid which have a style set
+        // and don't touch the other fields
+        // We use it to clear the fields we turned yellow
+        for (Node node : grid.getChildren()) {
+            if (node instanceof TextField) {
+                System.out.println(node.getStyle());
+                // clear
+                if (node.getStyle() != null && !node.getStyle().equals("")) {
+                    ((TextField) node).setText("");
+                    node.setStyle(null);
+                }
+            }
+        }
+    }
+    public void setLoginButton(ActionEvent actionEvent) {
+        String BrugernavnInput = BrugernavnText.getText();
+        String AdgangskodeInput = AdgangskodeText.getText();
+    }
+
+    public void LoginButton(ActionEvent actionEvent) { clearTextFields(grid); }
+}
