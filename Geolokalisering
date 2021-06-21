@@ -5,10 +5,20 @@ import java.time.LocalDate;
 public class Geolokalisering {
     private Integer zipCode;
     private LocalDate tidspunkt;
+    private Patient patient;
 
-    public Geolokalisering(Integer zipCode, LocalDate tidspunkt) {
+    public Geolokalisering(Integer zipCode, LocalDate tidspunkt, Patient patient) {
         this.zipCode = zipCode;
         this.tidspunkt = tidspunkt;
+        this.patient = patient;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
     }
 
     public Integer getZipCode() {
@@ -31,8 +41,9 @@ public class Geolokalisering {
     @Override
     public String toString() {
         return "Geolokalisering{" +
-                "zipCode='" + zipCode + '\'' +
-                "tidspunkt='" + tidspunkt + '\'' +
+                "zipCode=" + zipCode +
+                ", tidspunkt=" + tidspunkt +
+                ", patient=" + patient +
                 '}';
     }
 }
