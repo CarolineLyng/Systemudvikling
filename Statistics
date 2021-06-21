@@ -1,6 +1,9 @@
 package sample;
 
 import java.time.LocalDate;
+// følgende bibliotek er til XML:
+import jakarta.xml.bind.annotation.*;
+@XmlRootElement
 
 public class Statistics {
     private LocalDate dato;
@@ -9,14 +12,22 @@ public class Statistics {
     private Integer zipCode;
     private float infektionsRate;
 
-    public Statistics(LocalDate dato, Mutation mutation, Integer antalSmittede, Integer zipCode, float infektionsRate) {
-        this.dato = dato;
+    public Statistics(LocalDate date, Mutation mutation, Integer antalSmittede,
+                      Integer zipCode, float infektionsRate) {
+        this.dato = date;
         this.mutation = mutation;
         this.antalSmittede = antalSmittede;
         this.zipCode = zipCode;
         this.infektionsRate = infektionsRate;
     }
-
+// no argument default constructor for XML
+    public Statistics (){
+        this.dato = null;
+        this.mutation = null;
+        this.antalSmittede = null;
+        this.zipCode = null;
+        this.infektionsRate = Float.parseFloat(null);
+    }
     public float getInfektionsRate() {
         return infektionsRate;
     }
@@ -55,6 +66,18 @@ public class Statistics {
 
     public void setZipCode(Integer zipCode) {
         this.zipCode = zipCode;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Statistics{" +
+                "dato=" + dato +
+                ", mutation=" + mutation +
+                ", antalSmittede=" + antalSmittede +
+                ", zipCode=" + zipCode +
+                ", infektionsRate=" + infektionsRate +
+                '}';
     }
 }
 
