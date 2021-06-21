@@ -11,10 +11,14 @@ public class Patient {
     // An arraylist that will hold geolokalisering and sensordata
     public ArrayList<Geolokalisering> geolokalisering;
     public ArrayList<Sensordata> sensordata;
+    public ArrayList<Test> test;
+    public ArrayList<PatientRegister> patientRegister;
     // Constructor - EXPLAIN
     public Patient() {
         this.geolokalisering = new ArrayList<Geolokalisering>();
         this.sensordata = new ArrayList<Sensordata>();
+        this.test = new ArrayList<Test>();
+        this.patientRegister = new ArrayList<PatientRegister>();
     }
 
     private String firstName;
@@ -81,6 +85,39 @@ public class Patient {
         int age = Period.between(birthdate, today).getYears();
         return age;
     }
+
+    public ArrayList<Geolokalisering> getGeolokalisering() {
+        return geolokalisering;
+    }
+
+    public ArrayList<PatientRegister> getPatientRegister() {
+        return patientRegister;
+    }
+
+    public void setPatientRegister(ArrayList<PatientRegister> patientRegister) {
+        this.patientRegister = patientRegister;
+    }
+
+    public void setGeolokalisering(ArrayList<Geolokalisering> geolokalisering) {
+        this.geolokalisering = geolokalisering;
+    }
+
+    public ArrayList<Sensordata> getSensordata() {
+        return sensordata;
+    }
+
+    public void setSensordata(ArrayList<Sensordata> sensordata) {
+        this.sensordata = sensordata;
+    }
+
+    public ArrayList<Test> getTest() {
+        return test;
+    }
+
+    public void setTest(ArrayList<Test> test) {
+        this.test = test;
+    }
+
     public String getGender() {
         String serial = cpr.substring(7,11);
         if (Integer.parseInt(serial) % 2 == 0) {
@@ -95,6 +132,8 @@ public class Patient {
         return "Patient{" +
                 "geolokalisering=" + geolokalisering +
                 ", sensordata=" + sensordata +
+                ", test=" + test +
+                ", patientRegister=" + patientRegister +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
