@@ -2,10 +2,12 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
-import javafx.scene.text.Font;
+import javafx.stage.Stage;
 
 public class LoginController {
     public Label VelkommenLabel;
@@ -44,10 +46,38 @@ public class LoginController {
             }
         }
     }
-    public void setLoginButton(ActionEvent actionEvent) {
+    public void onLoginButtonSundhed(ActionEvent actionEvent) {
         String BrugernavnInput = BrugernavnText.getText();
         String AdgangskodeInput = AdgangskodeText.getText();
-    }
+        System.out.println("Login pressed");
+        // check username and password against database here ???
+        try {
+            ((Node)actionEvent.getSource()).getScene().getWindow().hide();
+            Scene scene = new Scene(Main.msSundhed,1200,500);
+            Stage primaryStage = new Stage();
+            primaryStage.setTitle("CoronaNet - Sundhedspersonale");
+            primaryStage.setScene(scene);
+            primaryStage.show();
 
-    public void LoginButton(ActionEvent actionEvent) { clearTextFields(grid); }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void onLoginButtonRegering(ActionEvent actionEvent) {
+        String BrugernavnInput = BrugernavnText.getText();
+        String AdgangskodeInput = AdgangskodeText.getText();
+        System.out.println("Login pressed");
+        // check username and password against database here ???
+        try {
+            ((Node)actionEvent.getSource()).getScene().getWindow().hide();
+            Scene scene = new Scene(Main.msRegering,1200,500);
+            Stage primaryStage = new Stage();
+            primaryStage.setTitle("CoronaNet - Regering");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
