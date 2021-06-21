@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="grid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SmitteoversigtController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.66667938232422" minWidth="10.0" prefWidth="127.55553181966147" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.33331298828125" minWidth="10.0" prefWidth="27.333328247070312" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="156.6666717529297" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.33331298828125" minWidth="10.0" prefWidth="127.77776082356769" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.33331298828125" minWidth="10.0" prefWidth="150.88890584309894" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.33331298828125" minWidth="10.0" prefWidth="217.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="144.0" minHeight="10.0" prefHeight="41.333333333333336" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="144.0" minHeight="0.0" prefHeight="19.333333333333336" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="144.0" minHeight="0.0" prefHeight="21.7777722676595" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="200.0" minHeight="0.0" prefHeight="21.444460550944015" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="245.99998474121094" minHeight="0.0" prefHeight="25.333338419596345" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="312.00001017252606" minHeight="0.0" prefHeight="21.999979654947936" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="312.00001017252606" minHeight="0.0" prefHeight="24.111129760742188" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="312.00001017252606" minHeight="0.0" prefHeight="17.111114501953125" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="371.33333333333337" minHeight="0.0" prefHeight="26.666656494140625" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="371.33333333333337" minHeight="0.0" prefHeight="22.666656494140625" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="371.33333333333337" minHeight="0.0" prefHeight="29.777791341145843" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="312.00001017252606" minHeight="0.0" prefHeight="36.888865152994754" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="312.00001017252606" minHeight="0.0" prefHeight="17.888875325520814" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="312.00001017252606" minHeight="0.0" prefHeight="24.4444580078125" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="312.00001017252606" minHeight="0.0" prefHeight="25.5555419921875" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="312.00001017252606" minHeight="10.0" prefHeight="18.00001017252606" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="312.00001017252606" minHeight="0.0" prefHeight="25.111124674479186" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="312.00001017252606" minHeight="10.0" prefHeight="90.88886515299481" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="22" textAlignment="CENTER" wrappingWidth="384.7262992858887" GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="2">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2021.06.28" textAlignment="CENTER" wrappingWidth="384.7262992858887" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="2">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0.8" textAlignment="CENTER" wrappingWidth="354.2465515136719" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="B.1.1.7" textAlignment="CENTER" wrappingWidth="346.13668632507324" GridPane.columnSpan="4" GridPane.rowIndex="2" GridPane.columnIndex="0">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2200" textAlignment="CENTER" wrappingWidth="200.13675498962402" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+        <Label fx:id="labelAntalSmittede" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="391.0" text="Antal smittede" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelDato" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="391.0" text="Dato" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelInfektionsRate" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="359.0" text="Infektionsrate" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelMutationstyper" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="366.0" text="Mutationstyper" textAlignment="CENTER" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.columnIndex="0">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelZipCode" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="215.0" text="Postnummer" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+    </children>
+</GridPane>
