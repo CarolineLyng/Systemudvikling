@@ -6,11 +6,25 @@ public class Sensordata {
     private Integer temperatur;
     private Integer hjerterytme;
     private LocalDate dato;
+    private Patient patient;
 
-    public Sensordata(Integer temperatur, Integer hjerterytme, LocalDate dato) {
+    public Sensordata(Integer temperatur, Integer hjerterytme, LocalDate dato, Patient patient) {
         this.temperatur = temperatur;
         this.hjerterytme = hjerterytme;
         this.dato = dato;
+        this.patient = patient;
+    }
+
+    public void setDato(LocalDate dato) {
+        this.dato = dato;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
     }
 
     public Integer getTemperatur() {
@@ -40,9 +54,10 @@ public class Sensordata {
     @Override
     public String toString() {
         return "Sensordata{" +
-                "temperatur='" + temperatur + '\'' +
-                "hjerterytme='" + hjerterytme + '\'' +
-                ", tidspunkt=" + dato +
+                "temperatur=" + temperatur +
+                ", hjerterytme=" + hjerterytme +
+                ", dato=" + dato +
+                ", patient=" + patient +
                 '}';
-        }
     }
+}
