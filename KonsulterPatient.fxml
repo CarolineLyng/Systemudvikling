@@ -47,7 +47,7 @@
                         </TableView>
                     </content>
                 </Tab>
-                <Tab fx:id="GeolokaliseringTab" text="Geolokalisering" />
+                <Tab fx:id="GeolokaliseringTab" text="Geolokalisering" >
                     <content>
                         <TableView fx:id="GeolokaliseringTable" prefHeight="200.0" prefWidth="200.0">
                             <columns>
