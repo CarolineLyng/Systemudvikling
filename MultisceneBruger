@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MultisceneBrugerController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Personlige oplysninger">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#sensordata" text="Indtast sensordata" />
+                        <MenuItem mnemonicParsing="false" onAction="#geolokalisering" text="Indtast geolokalisering" />
+                        <MenuItem mnemonicParsing="false" onAction="#samtykke" text="Giv samtykke / tilbagetræk samtykke" />
+                        <MenuItem mnemonicParsing="false" onAction="#luk" text="Luk" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Statistikker">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#antalSmittede" text="Antal smittede" />
+                        <MenuItem mnemonicParsing="false" onMenuValidation="#fordeling" text="Fordeling af smittede" />
+                        <MenuItem mnemonicParsing="false" onMenuValidation="#antalDødsfald" text="Antal dødsfald" />
+                        <MenuItem mnemonicParsing="false" onMenuValidation="#luk" text="Luk" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane />
+    </children>
+</VBox>
